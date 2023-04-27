@@ -32,4 +32,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-[IHS Markit Ltd.](https://ihsmarkit.com/index.html)
+[Alok Gupta.](https://alokgupta.hpage.com)
