@@ -1,6 +1,6 @@
 # pdf-diff tool
 
-![Logo](pdf-to-text.png)
+![Logo](pdf-to-text-img.png)
  
 `pdf-diff` tool is a tool to compare two pdf files. 
 
