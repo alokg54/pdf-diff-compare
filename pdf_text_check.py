@@ -275,3 +275,4 @@ if __name__ == '__main__':
     count_row = data_frame.shape[0]
     print("Total time to compare", count_row, "pair of files is:",
           "{:.2f}".format(end-start), "Sec.")
+          

@@ -33,3 +33,4 @@ def configure_logger():
 		return log
 	except Exception as exp:
 		print("Failed to create logger: ", exp)
+

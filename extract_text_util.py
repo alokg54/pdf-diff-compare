@@ -161,3 +161,4 @@ if __name__ == '__main__':
     pdf_path = 'G:\\PDF_Diff\\TEST\\sample\\ss\\CBRLD1 SERIES.pdf'
     a = pdftoText()
     a.extract_text_pdf_pdftohtml(pdf_path)
+
