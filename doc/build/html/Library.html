@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tool Coding documentation &mdash; pdf-diff-compare tool 1.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pdf-diff-compare tool 1.0.0 documentation" href="index.html"/>
+        <link rel="prev" title="Readme" href="readme.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pdf-diff-compare tool
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Readme</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tool Coding documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-extract_text_util">Extract Text Util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pdf_text_check">Main Module or function</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">pdf-diff-compare tool</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Tool Coding documentation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Library.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tool-coding-documentation">
+<h1>Tool Coding documentation<a class="headerlink" href="#tool-coding-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Here we will have the details about the implemenation</p>
+<div class="section" id="module-extract_text_util">
+<span id="extract-text-util"></span><h2>Extract Text Util<a class="headerlink" href="#module-extract_text_util" title="Permalink to this headline">¶</a></h2>
+<p><strong>Module Name</strong> : extract__text_util</p>
+<p>Module to extract text from PDF using PyPDF2 library and pdftohtml,
+It has two method implementation :func: extract_text_pdf_py2pdf</p>
+<dl class="class">
+<dt id="extract_text_util.pdftoText">
+<em class="property">class </em><code class="sig-prename descclassname">extract_text_util.</code><code class="sig-name descname">pdftoText</code><a class="headerlink" href="#extract_text_util.pdftoText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to generate plain text from pdf files
+Used two methods to do it -
+(1). PyPDF2 library
+(2). pdftohtml from Calibre tool</p>
+<dl class="method">
+<dt id="extract_text_util.pdftoText.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#extract_text_util.pdftoText.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="extract_text_util.pdftoText.__weakref__">
+<code class="sig-name descname">__weakref__</code><a class="headerlink" href="#extract_text_util.pdftoText.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="extract_text_util.pdftoText._get_xml_from_pdf_pdftohtml">
+<em class="property">static </em><code class="sig-name descname">_get_xml_from_pdf_pdftohtml</code><span class="sig-paren">(</span><em class="sig-param">file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#extract_text_util.pdftoText._get_xml_from_pdf_pdftohtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to generate xml file from pdf file using pdftohtml</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> – <code class="docutils literal notranslate"><span class="pre">generated</span> <span class="pre">xml</span> <span class="pre">file</span> <span class="pre">path</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">xml</span> <span class="pre">file</span> <span class="pre">path</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="extract_text_util.pdftoText._parse_xml">
+<em class="property">static </em><code class="sig-name descname">_parse_xml</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#extract_text_util.pdftoText._parse_xml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to parse xml file and return plain text format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file</strong> – <code class="docutils literal notranslate"><span class="pre">xml</span> <span class="pre">file</span> <span class="pre">path</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">plain</span> <span class="pre">text,</span> <span class="pre">page</span> <span class="pre">count</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="extract_text_util.pdftoText.extract_text_pdf_pdftohtml">
+<code class="sig-name descname">extract_text_pdf_pdftohtml</code><span class="sig-paren">(</span><em class="sig-param">pdf_filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#extract_text_util.pdftoText.extract_text_pdf_pdftohtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to consolidate _get_xml_from_pdf_pdftohtml and _parse_xml methods</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pdf_filepath</strong> – <code class="docutils literal notranslate"><span class="pre">pdf</span> <span class="pre">file</span> <span class="pre">path</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">plain</span> <span class="pre">text</span> <span class="pre">of</span> <span class="pre">pdf,</span> <span class="pre">page</span> <span class="pre">count</span> <span class="pre">and</span> <span class="pre">pdf</span> <span class="pre">file</span> <span class="pre">name</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="extract_text_util.pdftoText.extract_text_pdf_py2pdf">
+<em class="property">static </em><code class="sig-name descname">extract_text_pdf_py2pdf</code><span class="sig-paren">(</span><em class="sig-param">pdf_filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#extract_text_util.pdftoText.extract_text_pdf_py2pdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to extract text from the input pdf file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">text</span> <span class="pre">data,</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">pages</span> <span class="pre">in</span> <span class="pre">file</span></code></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pdf_text_check">
+<span id="main-module-or-function"></span><h2>Main Module or function<a class="headerlink" href="#module-pdf_text_check" title="Permalink to this headline">¶</a></h2>
+<p>Module to compare plain text of pdf files and write information to excel
+output file.</p>
+<dl class="class">
+<dt id="pdf_text_check.PdfCompare">
+<em class="property">class </em><code class="sig-prename descclassname">pdf_text_check.</code><code class="sig-name descname">PdfCompare</code><span class="sig-paren">(</span><em class="sig-param">file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#pdf_text_check.PdfCompare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to compare plain text of new pdf and old pdf files and generate
+excel file to write extracted information</p>
+<dl class="method">
+<dt id="pdf_text_check.PdfCompare.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#pdf_text_check.PdfCompare.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init method of Pdfcompare class</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pdf_text_check.PdfCompare.__weakref__">
+<code class="sig-name descname">__weakref__</code><a class="headerlink" href="#pdf_text_check.PdfCompare.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pdf_text_check.PdfCompare._write_df_to_excel">
+<em class="property">static </em><code class="sig-name descname">_write_df_to_excel</code><span class="sig-paren">(</span><em class="sig-param">df</em><span class="sig-paren">)</span><a class="headerlink" href="#pdf_text_check.PdfCompare._write_df_to_excel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to write data frame into excel file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> – <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">frame</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">frame</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pdf_text_check.PdfCompare.beatify_excel">
+<em class="property">static </em><code class="sig-name descname">beatify_excel</code><span class="sig-paren">(</span><em class="sig-param">excel_file</em><span class="sig-paren">)</span><a class="headerlink" href="#pdf_text_check.PdfCompare.beatify_excel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to write data to excel file
+:param excel_file:
+:return: <code class="docutils literal notranslate"><span class="pre">non</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pdf_text_check.PdfCompare.compare_pdf">
+<code class="sig-name descname">compare_pdf</code><span class="sig-paren">(</span><em class="sig-param">file1</em>, <em class="sig-param">file2</em>, <em class="sig-param">excel_out_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pdf_text_check.PdfCompare.compare_pdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to compare two pdf file and shows a detailed difference in an
+output excel file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>excel_out_file</strong> – <code class="docutils literal notranslate"><span class="pre">excel</span> <span class="pre">file</span> <span class="pre">data</span></code></p></li>
+<li><p><strong>file1</strong> – <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">pdf</span> <span class="pre">file</span></code></p></li>
+<li><p><strong>file2</strong> – <code class="docutils literal notranslate"><span class="pre">old</span> <span class="pre">pdf</span> <span class="pre">file</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">page</span> <span class="pre">count</span> <span class="pre">of</span> <span class="pre">file,</span> <span class="pre">data</span> <span class="pre">deleted</span> <span class="pre">from</span> <span class="pre">old</span> <span class="pre">file,</span> <span class="pre">data</span> <span class="pre">added</span> <span class="pre">into</span> <span class="pre">new</span> <span class="pre">file</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pdf_text_check.PdfCompare.excel_load">
+<code class="sig-name descname">excel_load</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">column_to_load</em><span class="sig-paren">)</span><a class="headerlink" href="#pdf_text_check.PdfCompare.excel_load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to read excel data using pandas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>column_to_load</strong> – `` list of column to read``</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">dataframe</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pdf_text_check.PdfCompare.get_file_difference">
+<code class="sig-name descname">get_file_difference</code><span class="sig-paren">(</span><em class="sig-param">data_pdf1</em>, <em class="sig-param">data_pdf2</em><span class="sig-paren">)</span><a class="headerlink" href="#pdf_text_check.PdfCompare.get_file_difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to calculate data added or removed in pdf1 compared to pdf2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_pdf1</strong> – <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">pdf1</span></code></p></li>
+<li><p><strong>data_pdf2</strong> – <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">pdf2</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">added</span> <span class="pre">in</span> <span class="pre">new</span> <span class="pre">file,</span> <span class="pre">data</span> <span class="pre">removed</span> <span class="pre">from</span> <span class="pre">old</span> <span class="pre">file</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pdf_text_check.PdfCompare.get_pdf_info">
+<em class="property">static </em><code class="sig-name descname">get_pdf_info</code><span class="sig-paren">(</span><em class="sig-param">pdf_filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#pdf_text_check.PdfCompare.get_pdf_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to get pdf information creation date, modification date and
+size of pdf file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pdf_filepath</strong> – <code class="docutils literal notranslate"><span class="pre">path</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">pdf</span> <span class="pre">file</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">modificationTime,</span> <span class="pre">creation_time,</span> <span class="pre">file_size_in_kb</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="readme.html" class="btn btn-neutral" title="Readme" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, IHS Markit Ltd.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

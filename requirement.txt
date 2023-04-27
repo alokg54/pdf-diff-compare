@@ -1,0 +1,10 @@
+pandas
+openpyxl==3.0.3
+PyPDF2==1.26.0
+textract==1.6.3
+
+
+
+
+
+calibre-64bit-4.17.0
